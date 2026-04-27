@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import userAvatar from "@/assets/user.png"
 import Link from 'next/link';
+import Navlink from './Navlink';
 
 const Navbar = () => {
     return (
@@ -13,19 +14,19 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-       <li><Link href={'/'}>Home</Link></li>
-       <li><Link href={'/about'}>About</Link></li>
-       <li><Link href={'/career'}>Career</Link></li>
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-gray-700">
+       <li><Navlink href={'/'}>Home</Navlink></li>
+       <li><Navlink href={'/about-us'}>About</Navlink></li>
+       <li><Navlink href={'/career'}>Career</Navlink></li>
       </ul>
     </div>
             </div>
             
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><Link href={'/'}>Home</Link></li>
-       <li><Link href={'/about'}>About</Link></li>
-       <li><Link href={'/career'}>Career</Link></li>
+    <ul className="menu menu-horizontal px-1 text-gray-700">
+      <li><Navlink href={'/'}>Home</Navlink></li>
+       <li><Navlink href={'/about-us'}>About</Navlink></li>
+       <li><Navlink href={'/career'}>Career</Navlink></li>
     </ul>
   </div>
             <div className="navbar-end gap-2">
@@ -35,9 +36,9 @@ const Navbar = () => {
                     height={40}
                     alt='user avatar icon'
                 />
-                <Link href={'login'}>
+                <Navlink href={'login'}>
                     <button className='bg-gray-700 text-white btn btn-wide px-12'>Login</button>
-                </Link>
+                </Navlink>
     
   </div>
 </div>
