@@ -21,14 +21,17 @@ const NewsCategoryPage = async({ params }) => {
       <div className="col-span-3 p-4">
         <LeftSidebar newsCatagories={newsCatagories} activeId={id}/>
       </div>
-            <div className="bg-red-100 font-bold text-2xl col-span-6 p-4">
+            <div className=" font-bold text-2xl col-span-6 ">
                 <h2 className="text-xl font-semibold mb-4">All News</h2>
-                {
+               
+          <div className='flex flex-col gap-4'>
+          {
                     news.length > 0 ?
           news.map(n => {
               return (<NewsCard key={n._id} news={ n} />);
           }) : <h2>No News Found</h2>
         }
+          </div>
       </div>
       <div className="col-span-3 p-4">
         <RightSidebar/>
