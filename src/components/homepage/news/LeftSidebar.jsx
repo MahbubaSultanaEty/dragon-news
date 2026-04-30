@@ -11,13 +11,13 @@ const LeftSidebar = ({ newsCatagories, activeId }) => {
           return (
             <li
               key={category.category_id}
-              className={` rounded-sm  font-bold  text-xs p-2  
-                    ${activeId === category.category_id && "bg-pink-100 text-pink-900"} 
+              className={` rounded-sm  font-semibold  text-xs p-2  
+                    ${activeId === category.category_id && "bg-pink-100 text-pink-900 text-bold text-sm"} 
                `}
             >
               <Link
                 className="block "
-                href={`/catagory/${category.category_id}`}
+                href={`/category/${category.category_id}`}
               >
                
               {category.category_name}
