@@ -1,4 +1,5 @@
 import LeftSidebar from '@/components/homepage/news/LeftSidebar';
+import NewsCard from '@/components/homepage/news/NewsCard';
 import RightSidebar from '@/components/homepage/news/RightSidebar';
 import { getCatagories, getNewsByCatagory } from '@/lib/data';
 import React from 'react';
@@ -25,7 +26,7 @@ const NewsCategoryPage = async({ params }) => {
                 {
                     news.length > 0 ?
           news.map(n => {
-              return (<div key={n._id} className="m-4 text-sm ">{n.title}</div>);
+              return (<NewsCard key={n._id} news={ n} />);
           }) : <h2>No News Found</h2>
         }
       </div>
