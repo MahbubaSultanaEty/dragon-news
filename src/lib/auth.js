@@ -2,7 +2,7 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const client = new MongoClient("mongodb+srv://dragon_news:dragon_password@cluster0.fajgs43.mongodb.net/?appName=Cluster0");
+const client = new MongoClient(process.env.MONGO_URI);
 const db = client.db();
 
 export const auth = betterAuth({
@@ -10,4 +10,7 @@ export const auth = betterAuth({
     // Optional: if you don't provide a client, database transactions won't be enabled.
     client
   }),
+    emailAndPassword: { 
+    enabled: true, 
+  }, 
 });
