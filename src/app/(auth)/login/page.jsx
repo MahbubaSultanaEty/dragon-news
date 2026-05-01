@@ -18,8 +18,8 @@ const LoginPage = () => {
     <div className="container mx-auto min-h-[90vh] flex justify-center items-center">
       <div className="p-4 rounded-xl bg-white">
         <form action="" onSubmit={handleSubmit(handleLoginFunc)}>
-          <fieldset className="fieldset bg-white border-base-300 rounded-box w-xs  p-4">
-            <legend className="fieldset-legend text-xl text-center">
+          <fieldset className="fieldset bg-white border-base-300 rounded-box w-xs  p-4 mt-4">
+            <legend className="fieldset-legend text-xl text-center ">
               Login You Account
                       </legend>
                       <div className="divider"></div>
