@@ -44,7 +44,7 @@ const NewsCard = ({ news }) => {
       </h2>
 
       {/* Image */}
-      <div className="rounded-md overflow-hidden p-2">
+      <div className="rounded-xs overflow-hidden p-2">
         <Image
           src={thumbnail_url}
           alt="news"
