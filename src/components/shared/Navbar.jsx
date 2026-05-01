@@ -29,14 +29,18 @@ const Navbar = () => {
        <li><Navlink href={'/career'}>Career</Navlink></li>
     </ul>
   </div>
-            <div className="navbar-end gap-2">
-                <Image
+        <div className="navbar-end gap-2 ">
+          
+             <Image
                     src={userAvatar}
                     width={40}
                     height={40}
-                    alt='user avatar icon'
-                />
-                <Navlink href={'login'}>
+              alt='user avatar icon'
+              className='bg-amber-800 rounded-full'
+          />
+          
+               
+                <Navlink href={'/login'}>
                     <button className='bg-gray-700 text-white btn btn-wide px-12'>Login</button>
                 </Navlink>
     

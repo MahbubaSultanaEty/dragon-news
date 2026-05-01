@@ -7,12 +7,11 @@ import React from 'react';
 
 const NewsCategoryPage = async({ params }) => { 
     const {id} = await params;
-    console.log(id);
+    // console.log(id);
 
      const catagoriesData = await getCatagories();
      const newsCatagories = catagoriesData.news_category;
   // console.log(newsCatagories, "news catagory");
-
 
   const news = await getNewsByCatagory(id);
 
