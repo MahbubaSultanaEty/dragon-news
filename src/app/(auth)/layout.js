@@ -5,7 +5,7 @@ import LeftSidebar from "@/components/homepage/news/LeftSidebar";
 
 const AuthLayout = ({ children }) => {
   return (
-    <div className={`${montserrat.className} bg-pink-100 `}>
+    <div className={`${montserrat.className} bg-gray-400 `}>
       <div className="w-11/12  mx-auto ">
       <Navbar />
       {children}

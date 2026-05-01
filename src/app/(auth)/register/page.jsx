@@ -72,7 +72,7 @@ const RegisterPage = () => {
             {errors.password && (
               <p className="text-red-500">{errors.password.message}</p>
             )}
-            <button className="btn bg-pink-800 text-white mt-4 ">Login</button>
+            <button className="btn bg-gray-800 text-white mt-4 ">Register</button>
           </fieldset>
         </form>
 
