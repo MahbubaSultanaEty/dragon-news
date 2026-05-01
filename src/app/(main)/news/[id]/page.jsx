@@ -4,6 +4,20 @@ import Link from 'next/link';
 import React from 'react';
 import { BiArrowToLeft } from 'react-icons/bi';
 
+export const generateMetadata = async({ params }) => {
+    const { id } = await params;
+    // console.log(id, "params metadata");
+    const news = await getNewsDetailsById(id);
+    console.log(news, "news");
+
+    return {
+        title: news.title,
+        description: news.details
+    }
+}
+
+
+
 const NewsDetails = async ({ params }) => {
     const { id } = await params;
     // console.log(params, id);

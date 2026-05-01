@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Dragon News - career",
+  description: "Accuracy. Transparency. Independence.",
+};
+
 export default function CareersPage() {
   const jobs = [
     {
@@ -43,7 +48,7 @@ export default function CareersPage() {
           <h2 className="text-3xl font-bold mb-4">Why Work With Us</h2>
           <p className="text-base md:text-lg leading-relaxed">
             At The Dragon News, we believe in impactful journalism,
-            collaborative culture, and continuous growth. Whether you're a
+            collaborative culture, and continuous growth. Whether you are a
             writer, editor, or developer, your work will reach thousands and
             make a difference.
           </p>

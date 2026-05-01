@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 
+export const metadata = {
+  title: "Dragon News - about us",
+  description: "Delivering truth, insight, and stories that matter — one edition at a time",
+};
+
 const AboutUsPage = () => {
     return (
         <div className="min-h-screen bg-[#f8f5f0] text-[#1a1a1a] px-6 py-12">
