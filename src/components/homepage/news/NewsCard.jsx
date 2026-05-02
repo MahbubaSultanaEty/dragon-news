@@ -7,7 +7,7 @@ import { RiBookMarkedLine } from "react-icons/ri";
 
 const NewsCard = ({ news }) => {
     
-    console.log("nwes", news);
+    // console.log("nwes", news);
     
     const { title, author, rating, total_view, others_info,details, thumbnail_url } = news;
 
