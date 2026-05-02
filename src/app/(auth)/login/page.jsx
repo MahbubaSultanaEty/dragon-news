@@ -1,7 +1,10 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { BsEyeSlash } from "react-icons/bs";
+import { FaEye } from "react-icons/fa";
 
 const LoginPage = () => {
   const {
@@ -10,6 +13,8 @@ const LoginPage = () => {
     watch,
     formState: { errors },
   } = useForm();
+
+  const [isShowPassword, setIsShowPassword] = useState(false)
 
   const handleLoginFunc = async (data) => {
      console.log(data);
@@ -39,20 +44,30 @@ const LoginPage = () => {
               type="email"
               className="input bg-pink-50"
               placeholder="Email"
-              {...register("email", {required: "Enter a valid email"}) }
-                      />
-                      {errors.email && <p className="text-red-600">{ errors.email.message}</p>}
-
-            <label className="label font-bold text-black">Password</label>
+              {...register("email", { required: "Enter a valid email" })
+             }
+            />
+            
+            {errors.email && <p className="text-red-600">{errors.email.message}</p>}
+            
+            <fieldset className="relative">
+               <label className="label font-bold text-black">Password</label>
             <input
               name="password"
-              type="password"
+              type={isShowPassword ? "text" : "password"}
               className="input bg-pink-50"
               placeholder="Password"
                           {...register("password", {required: "Password field is required"})}
                           
-            />
+              />
+              <span onClick={() => setIsShowPassword(!isShowPassword)} className="absolute top-8 right-4">
+                { 
+                  isShowPassword? <FaEye  /> : <BsEyeSlash/>
+                }
+              </span>
+            
                       {errors.password && <p className="text-red-500">{ errors.password.message}</p>}
+            </fieldset>
             <button className="btn bg-gray-800 text-white mt-4 ">Login</button>
           </fieldset>
         </form>
