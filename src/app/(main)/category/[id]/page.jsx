@@ -14,14 +14,16 @@ const NewsCategoryPage = async({ params }) => {
   // console.log(newsCatagories, "news catagory");
 
   const news = await getNewsByCatagory(id);
-
+  
+  const currentCategory = newsCatagories.find(news => news.category_id == id);
     return (
         <div className="grid grid-cols-12 gap-4">
       <div className="col-span-3 p-4">
         <LeftSidebar newsCatagories={newsCatagories} activeId={id}/>
       </div>
             <div className=" font-bold text-2xl col-span-6 ">
-                <h2 className="text-xl font-semibold mb-4">All News</h2>
+          <h2 className="text-xl font-semibold mb-4">{
+          currentCategory.category_name || "All Categories"}</h2>
                
           <div className='flex flex-col gap-4'>
           {
