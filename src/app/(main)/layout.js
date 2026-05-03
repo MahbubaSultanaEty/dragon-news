@@ -1,3 +1,4 @@
+import RightSidebar from '@/components/homepage/news/RightSidebar';
 import BreackingNews from '@/components/shared/BreackingNews';
 import Header from '@/components/shared/Header';
 import Navbar from '@/components/shared/Navbar';
@@ -8,9 +9,13 @@ const MainLayout
      return (
          <div className='w-11/12  mx-auto'>
              <div>
-                  <Header />
+             <Header />
              <BreackingNews/>
-         <Navbar />
+                 <Navbar />
+                 <div className="grid md:hidden w-52 h-32">
+                   <RightSidebar />  
+                 </div>
+                 
              {children}
              </div>
 
