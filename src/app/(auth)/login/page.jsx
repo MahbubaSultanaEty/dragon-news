@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsEyeSlash } from "react-icons/bs";
 import { FaEye } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const {
@@ -27,10 +28,10 @@ const LoginPage = () => {
     });
     console.log(res, error);
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
     }
     if (res) {
-      alert("Registered Successfully");
+      toast.success("Logged in Successfully");
     }
   };
 

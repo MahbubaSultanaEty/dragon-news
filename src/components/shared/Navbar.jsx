@@ -5,11 +5,17 @@ import userAvatar from "@/assets/user.png";
 import Link from "next/link";
 import Navlink from "./Navlink";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
 
   const user = session?.user;
+  const logout = async () => {  
+     await authClient.signOut();
+    toast("logged out ")
+    
+  }
 
   console.log(user, "user");
   return (
@@ -75,7 +81,7 @@ const Navbar = () => {
         />
    {
         user ? (        
-          <button className="bg-gray-700 text-white btn btn-wide px-12" onClick={async() => await authClient.signOut()}>
+          <button className="bg-gray-700 text-white btn btn-wide px-12" onClick={logout}>
             Logout
           </button>
      

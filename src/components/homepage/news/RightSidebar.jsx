@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const RightSidebar = () => {
   const handleGoogleSignIn = async() => {
@@ -17,6 +18,7 @@ const RightSidebar = () => {
     provider: "github",
      });
     console.log(data, "data");
+    
   }
   return (
     <div>

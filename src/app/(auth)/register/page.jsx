@@ -1,13 +1,14 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsEyeSlash } from "react-icons/bs";
 import { FaEye } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
-
   const [isShowPassword, setIsShowPassword] = useState(false);
   const {
     register,
@@ -15,6 +16,8 @@ const RegisterPage = () => {
     watch,
     formState: { errors },
   } = useForm();
+
+  const router = useRouter();
 
   const handleRegisterFunc = async (data) => {
     // console.log(data);
@@ -24,16 +27,17 @@ const RegisterPage = () => {
       email: email, // required
       password: password, // required
       image: photo,
-      callbackURL: "/",
     });
 
     console.log(res, error);
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
     }
     if (res) {
-      alert("Registered Successfully");
+      toast.success("Registered Successfully");
     }
+
+    router.push("/")
   };
 
   return (

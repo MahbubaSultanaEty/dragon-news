@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
       className={`  ${poppins.className} h-full antialiased `}
     >
       <body className=" min-h-full flex flex-col ">
-        
+        <ToastContainer />
         {children}</body>
     </html>
   );
