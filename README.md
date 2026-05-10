@@ -7,8 +7,8 @@ This project was my first experience implementing authentication and protected r
 
 ## 🚀 Live Demo
 
-🔗 Live Site: https://your-live-link.com  
-🔗 Client Repository: https://github.com/your-username/dragon-news-client
+🔗 Live Site: https://dragon-news-omega-red.vercel.app/  
+🔗 Client Repository: https://github.com/MahbubaSultanaEty/dragon-news
 
 ---
 
